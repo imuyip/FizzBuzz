@@ -6,22 +6,23 @@
 // }
 // document.write('<p>You chose the number ' + userInput + '</p>');
 
-function writeP(text, class){
-    document.write("<p>" + text + "</p>");
+function writeP(text, className){
+    document.write('<p class="' + className + '">' + text + "</p>");
 }
 
 var userInput = 100
 var counter = 1;
 
+writeP("You chose: " + userInput, 'choice');
 while (counter<=userInput) {
   if (counter%3===0 && counter%5===0) {
-    writeP("FizzBuzz");
+    writeP("FizzBuzz", "fizzbuzz");
   }
   else if (counter%3 ===0) {
-    writeP("Fizz");
+    writeP("Fizz", "fizz");
   }
   else if (counter%5===0){
-    writeP("Buzz");
+    writeP("Buzz", "buzz");
   }
   else {
     writeP(counter);
